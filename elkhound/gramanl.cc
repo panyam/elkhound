@@ -4812,12 +4812,12 @@ void emitSwitchCode(Grammar const &g, EmitCode &out,
         if (syms.firstC()->isNonterminal()) {
           // use the nonterminal map
           out << "      cout << \"WARNING: there is no action to deallocate nonterm \"\n"
-                 "           << nontermNames[" << switchVar << "] << endl;\n";
+                 "           << nontermNames[" << switchVar << "] << std::endl;\n";
         }
         else {
           // use the terminal map
           out << "      cout << \"WARNING: there is no action to deallocate terminal \"\n"
-                 "           << termNames[" << switchVar << "] << endl;\n";
+                 "           << termNames[" << switchVar << "] << std::endl;\n";
         }
       }
       else {
@@ -4830,7 +4830,7 @@ void emitSwitchCode(Grammar const &g, EmitCode &out,
       char const *w = g.defaultMergeAborts? "error: " : "WARNING: ";
       out << "      cout << toString(loc) \n"
           << "           << \": " << w << "there is no action to merge nonterm \"\n"
-          << "           << nontermNames[" << switchVar << "] << endl;\n";
+          << "           << nontermNames[" << switchVar << "] << std::endl;\n";
       if (g.defaultMergeAborts) {
         out << "      abort();\n";
       }
