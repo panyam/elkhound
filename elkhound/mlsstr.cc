@@ -7,7 +7,7 @@
 #include "exc.h"         // xformat
 #include "strutil.h"     // string, replace
 
-#include <iostream.h>    // cout
+#include <iostream>    // cout
 #include <ctype.h>       // isspace
 
 

@@ -7,6 +7,13 @@
 #include "lexerint.h"        // LexerInterface
 #include "arith.gr.gen.h"    // Arith, the parser context class
 
+using std::ostream;
+using std::ofstream;
+using std::ifstream;
+using std::istream;
+using std::cout;
+using std::endl;
+
 class ParseTables;           // parsetables.h
 class UserActions;           // useract.h
 

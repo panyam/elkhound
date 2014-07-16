@@ -15,7 +15,7 @@
 #include "array.h"           // GrowArray
 #include "mlsstr.h"          // MLSubstrate
 
-#include <fstream.h>         // ifstream
+#include <fstream>         // ifstream
 #include <ctype.h>           // isspace, isalnum
 
 #define LIT_STR(s) LocString(SL_INIT, grammarStringTable.add(s))

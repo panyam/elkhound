@@ -5,7 +5,7 @@
 #include "astvisit.h"     // ASTVisitorEx
 #include "trace.h"        // TRACE
 
-#include <iostream.h>     // cout
+#include <iostream>     // cout
 
 
 // ----------------------- ParseEnv -----------------------

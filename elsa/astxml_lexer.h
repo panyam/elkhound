@@ -9,7 +9,7 @@
 #include "sm_flexlexer.h"       // yyFlexLexer
 #include "str.h"                // string
 #include "astxml_tokens.h"
-#include "fstream.h"            // ifstream
+#include <fstream>            // ifstream
 
 class AstXmlLexer : private yyFlexLexer {
   public:

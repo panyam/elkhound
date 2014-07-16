@@ -7,7 +7,14 @@
 #define PTREENODE_H
 
 #include <stddef.h>     // NULL
-#include <iostream.h>   // ostream
+#include <iostream>   // ostream
+
+using std::ostream;
+using std::ofstream;
+using std::ifstream;
+using std::istream;
+using std::cout;
+using std::endl;
 
 // for storing counts of parse trees; I try to make the code work for
 // either 'int' or 'double' in this spot (e.g. I assign 0 to it

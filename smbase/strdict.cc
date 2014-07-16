@@ -307,10 +307,10 @@ void StringDict::selfCheck() const
 }
 
 
-void StringDict::insertOstream(ostream &os) const
+void StringDict::insertOstream(std::ostream &os) const
 {
   FOREACH_ITERC(*this, entry) {
-    os << entry.key() << " = " << entry.value() << endl;
+    os << entry.key() << " = " << entry.value() << std::endl;
   }
 }
 

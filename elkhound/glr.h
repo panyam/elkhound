@@ -48,7 +48,14 @@
 #include "sobjlist.h"      // SObjList
 
 #include <stdio.h>         // FILE
-#include <iostream.h>      // ostream
+#include <iostream>      // ostream
+
+using std::ostream;
+using std::ofstream;
+using std::ifstream;
+using std::istream;
+using std::cout;
+using std::endl;
 
 
 // fwds from other files

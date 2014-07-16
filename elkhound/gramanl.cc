@@ -17,9 +17,16 @@
 #include "ckheap.h"      // numMallocCalls
 #include "genml.h"       // emitMLActionCode
 
-#include <fstream.h>     // ofstream
+#include <fstream>     // ofstream
 #include <stdlib.h>      // getenv
 #include <stdio.h>       // printf
+
+using std::ostream;
+using std::ofstream;
+using std::ifstream;
+using std::istream;
+using std::cout;
+using std::endl;
 
 // for ParseTables::emitConstructionCode:
 //   linkdepend: parsetables.cc
@@ -4270,7 +4277,7 @@ void emitActionCode(GrammarAnalysis const &g, rostring hFname,
   out << "#include \"srcloc.h\"      // SourceLoc\n";
   out << "\n";
   out << "#include <assert.h>      // assert\n";
-  out << "#include <iostream.h>    // cout\n";
+  out << "#include <iostream>    // cout\n";
   out << "#include <stdlib.h>      // abort\n";
   out << "\n";
 

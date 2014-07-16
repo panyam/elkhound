@@ -1,7 +1,7 @@
 // cc2main.cc            see license.txt for copyright and terms of use
 // toplevel driver for cc2
 
-#include <iostream.h>     // cout
+#include <iostream>     // cout
 #include <stdlib.h>       // exit
 
 #include "trace.h"        // traceAddSys

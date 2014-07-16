@@ -4,9 +4,16 @@
 #ifndef EMITCODE_H
 #define EMITCODE_H
   
-#include <fstream.h>      // ofstream
+#include <fstream>      // ofstream
 #include "str.h"          // stringBuffer
 #include "srcloc.h"       // SourceLoc
+
+using std::ostream;
+using std::ofstream;
+using std::ifstream;
+using std::istream;
+using std::cout;
+using std::endl;
 
 class EmitCode : public stringBuilder {
 private:     // data

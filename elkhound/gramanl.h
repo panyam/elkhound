@@ -24,6 +24,13 @@
 #include "glrconfig.h"    // SOURCELOC
 #include "parsetables.h"  // ParseTables, GrowArray
 
+using std::ostream;
+using std::ofstream;
+using std::ifstream;
+using std::istream;
+using std::cout;
+using std::endl;
+
 // forward decls
 class Bit2d;              // bit2d.h
 class BitArray;           // bitarray.h

@@ -14,7 +14,7 @@
 #include "typ.h"         // bool
 #include "xassert.h"     // xassert, for convenience for #includers
 #include "str.h"         // string
-#include <iostream.h>    // ostream
+#include <iostream>    // ostream
 
 // forward declarations
 class stringBuilder;
@@ -79,8 +79,8 @@ public:
     { return msg; }
 
   // print why
-  void insert(ostream &os) const;
-  friend ostream& operator << (ostream &os, xBase const &obj)
+  void insert(std::ostream &os) const;
+  friend std::ostream& operator << (std::ostream &os, xBase const &obj)
     { obj.insert(os); return os; }
 
   // add a string describing what was going on at the time the

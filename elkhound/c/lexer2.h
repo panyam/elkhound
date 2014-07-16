@@ -10,6 +10,13 @@
 #include "useract.h"      // SemanticValue
 #include "lexerint.h"     // LexerInterface
 
+using std::ostream;
+using std::ofstream;
+using std::ifstream;
+using std::istream;
+using std::cout;
+using std::endl;
+
 class CCLang;             // cc_lang.h
 
 // this enumeration defines the terminal symbols that the parser

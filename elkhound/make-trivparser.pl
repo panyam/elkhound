@@ -43,7 +43,8 @@ sub preamble {
   print(<<"EOF");
 
     verbatim [
-      #include <iostream.h>     // cout
+      #include <iostream>     // cout
+
       $addlIncl
 
       extern int count;

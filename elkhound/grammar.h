@@ -21,7 +21,7 @@
 #ifndef __GRAMMAR_H
 #define __GRAMMAR_H
 
-#include <iostream.h>    // ostream
+#include <iostream>    // ostream
 
 #include "str.h"         // string
 #include "objlist.h"     // ObjList
@@ -31,6 +31,13 @@
 #include "strobjdict.h"  // StringObjDict
 #include "owner.h"       // Owner
 #include "asockind.h"    // AssocKind
+
+using std::ostream;
+using std::ofstream;
+using std::ifstream;
+using std::istream;
+using std::cout;
+using std::endl;
 
 class StrtokParse;       // strtokp.h
 

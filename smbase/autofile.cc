@@ -34,7 +34,7 @@ AutoFILE::~AutoFILE()
 #ifdef TEST_AUTOFILE
 
 #include "test.h"         // ARGS_MAIN
-#include <iostream.h>     // cout
+#include <iostream>     // cout
 
 void entry(int argc, char *argv[])
 {                         

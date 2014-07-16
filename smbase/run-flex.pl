@@ -152,7 +152,7 @@ for ($i=0; $i < @lines; $i++) {
   # this is stateless because it does not occur in the cygwin
   # flex output (they have a different fix)
   if ($line =~ m/class istream;/) {
-    print OUT ("#include <iostream.h>      // class istream\n");
+    print OUT ("#include <iostream>      // class istream\n");
     next;
   }
 

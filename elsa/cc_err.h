@@ -8,7 +8,7 @@
 #include "str.h"       // string
 #include "srcloc.h"    // SourceLoc
 
-#include <ostream.h>   // ostream
+#include <ostream>   // ostream
 
 
 // flags on errors

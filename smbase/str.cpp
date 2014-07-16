@@ -8,7 +8,7 @@
 #include <stdio.h>          // sprintf
 #include <ctype.h>          // isspace
 #include <string.h>         // strcmp
-#include <iostream.h>       // ostream << char*
+#include <iostream>       // std::ostream << char*
 #include <assert.h>         // assert
 #include <unistd.h>         // write
 
@@ -139,7 +139,7 @@ string& string::operator&=(string const &tail)
 }
 
 
-void string::readdelim(istream &is, char const *delim)
+void string::readdelim(std::istream &is, char const *delim)
 {
   stringBuilder sb;
   sb.readdelim(is, delim);
@@ -147,7 +147,7 @@ void string::readdelim(istream &is, char const *delim)
 }
 
 
-void string::write(ostream &os) const
+void string::write(std::ostream &os) const
 {
   os << s;     // standard char* writing routine
 }
@@ -367,7 +367,7 @@ stringBuilder& stringBuilder::operator<< (Manipulator manip)
 
 
 // slow but reliable
-void stringBuilder::readdelim(istream &is, char const *delim)
+void stringBuilder::readdelim(std::istream &is, char const *delim)
 {
   char c;
   is.get(c);
@@ -463,7 +463,7 @@ string vstringf(char const *format, va_list args)
 // ------------------ test code --------------------
 #ifdef TEST_STR
 
-#include <iostream.h>    // cout
+#include <iostream>    // cout
 
 void test(unsigned long val)
 {

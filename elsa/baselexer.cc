@@ -5,7 +5,7 @@
 #include "strtable.h"    // StringTable
 #include "exc.h"         // throw_XOpen
 
-#include <fstream.h>     // ifstream
+#include <fstream>     // ifstream
 
 #if defined(__GNUC__) && (__GNUC__ > 2)
   // gcc-3 doesn't have istrstream (but it is standard!), so fake it
@@ -20,7 +20,7 @@
 #else
   // should work on any compiler that implements the C++98 standard
   // (istrstream is deprecated but still standard)
-  #include <strstream.h>   // istrstream
+  #include <strstream>   // istrstream
 
   inline istream *construct_istrstream(char const *buf, int len)
   {

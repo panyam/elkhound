@@ -5,7 +5,7 @@
 // Scott McPeak, 1995-2000  This file is public domain.
 
 // 2005-03-01: See string.txt.  The plan is to evolve the class
-// towards compatibility with std::string, such that eventually
+// towards compatibility with string, such that eventually
 // they will be interchangeable.  So far I have converted only
 // the most problematic constructs, those involving construction,
 // conversion, and internal pointers.
@@ -14,7 +14,7 @@
 #define STR_H
 
 #include "typ.h"         // bool
-#include <iostream.h>	 // istream, ostream
+#include <iostream>	 // istream, ostream
 #include <stdarg.h>      // va_list
 #include <string.h>      // strcmp, etc.
 
@@ -25,7 +25,7 @@ class Flatten;           // flatten.h
 //
 // 9/19/04: I originally made this definition to work around a problem
 // with Borland C++ 4.5.  It causes a problem when using the new
-// standard library, since the name clashes with std::string.  A
+// standard library, since the name clashes with string.  A
 // simple solution is to remove the #definition and let namespaces do
 // their job.  Since Intel's headers are the only ones that provoke
 // the problem I'll confine it to that case for now.  Eventually I
@@ -43,7 +43,7 @@ class Flatten;           // flatten.h
 
 // ------------------------- string ---------------------
 // This is used when I want to call a function in smbase::string
-// that does not exist or has different semantics in std::string.
+// that does not exist or has different semantics in string.
 // That way for now I can keep using the function, but it is 
 // marked as incompatible.
 enum SmbaseStringFunc { SMBASE_STRING_FUNC };
@@ -84,7 +84,7 @@ public:	       // funcs
   bool isempty() const { return s[0]==0; }
   bool contains(char c) const;
   
-  // std::string has this instead; I will begin using slowly
+  // string has this instead; I will begin using slowly
   bool empty() const { return isempty(); }
 
   // array-like access
@@ -137,27 +137,27 @@ public:	       // funcs
   string& operator&= (string const &tail);
 
   // input/output
-  friend istream& operator>> (istream &is, string &obj)
+  friend std::istream& operator>> (std::istream &is, string &obj)
     { obj.readline(is); return is; }
-  friend ostream& operator<< (ostream &os, string const &obj)
+  friend std::ostream& operator<< (std::ostream &os, string const &obj)
     { obj.write(os); return os; }
 
   // note: the read* functions are currently implemented in a fairly
   // inefficient manner (one char at a time)
 
-  void readdelim(istream &is, char const *delim);
+  void readdelim(std::istream &is, char const *delim);
     // read from is until any character in delim is encountered; consumes that
     // character, but does not put it into the string; if delim is null or
     // empty, reads until EOF
 
-  void readall(istream &is) { readdelim(is, NULL); }
+  void readall(std::istream &is) { readdelim(is, NULL); }
     // read all remaining chars of is into this
 
-  void readline(istream &is) { readdelim(is, "\n"); }
+  void readline(std::istream &is) { readdelim(is, "\n"); }
     // read a line from input stream; consumes the \n, but doesn't put it into
     // the string
 
-  void write(ostream &os) const;
+  void write(std::ostream &os) const;
     // writes all stored characters (but not '\0')
     
   // debugging
@@ -239,7 +239,7 @@ public:
   // unlike 'string' above, I will allow stringBuilder to convert to
   // char const * so I can continue to use 'stringc' to build strings
   // for functions that accept char const *; this should not conflict
-  // with std::string, since I am explicitly using a different class
+  // with string, since I am explicitly using a different class
   // (namely stringBuilder) when I use this functionality
   operator char const * () const { return c_str(); }
 
@@ -297,12 +297,12 @@ public:
   stringBuilder& operator<< (Manipulator manip);
 
   // stream readers
-  friend istream& operator>> (istream &is, stringBuilder &sb)
+  friend std::istream& operator>> (std::istream &is, stringBuilder &sb)
     { sb.readline(is); return is; }
-  void readall(istream &is) { readdelim(is, NULL); }
-  void readline(istream &is) { readdelim(is, "\n"); }
+  void readall(std::istream &is) { readdelim(is, NULL); }
+  void readline(std::istream &is) { readdelim(is, "\n"); }
 
-  void readdelim(istream &is, char const *delim);
+  void readdelim(std::istream &is, char const *delim);
 
   // an experiment: hex formatting (something I've sometimes done by resorting
   // to sprintf in the past)

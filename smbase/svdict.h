@@ -8,13 +8,12 @@
 #ifndef __SVDICT_H
 #define __SVDICT_H
 
-#include <iostream.h>   // ostream
+#include <iostream>   // ostream
 #include "str.h"        // string
 #include "macros.h"     // DMEMB
 #include "xassert.h"    // xassert
 #include "typ.h"        // MUTABLE
 #include "strhash.h"    // StringHash
-  
 
 // constness: for this class, 'const' means the *mapping* from string
 // to void* won't change; but I don't prevent the thing pointed-at
