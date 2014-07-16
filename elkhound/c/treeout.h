@@ -9,6 +9,13 @@
 
 #include <iostream>     // ostream
 
+using std::cout;
+using std::endl;
+using std::istream;
+using std::ifstream;
+using std::ostream;
+using std::ofstream;
+
 // print heading to stdout, with some indication of tree level
 std::ostream &treeOut(int level);
 

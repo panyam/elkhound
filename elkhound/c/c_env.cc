@@ -7,6 +7,12 @@
 #include "strtable.h"    // StringTable
 #include "cc_lang.h"     // CCLang
 
+using std::cout;
+using std::endl;
+using std::istream;
+using std::ifstream;
+using std::ostream;
+using std::ofstream;
 
 // --------------------- CFGEnv -----------------------
 CFGEnv::CFGEnv()

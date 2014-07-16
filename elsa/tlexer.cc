@@ -10,6 +10,13 @@
 
 #include <iostream>      // cout
 
+using std::cout;
+using std::endl;
+using std::istream;
+using std::ifstream;
+using std::ostream;
+using std::ofstream;
+
 
 void entry(int argc, char **argv)
 {

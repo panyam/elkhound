@@ -10,6 +10,13 @@
 #include "c.ast.gen.h"      // C AST elements
 #include "sobjlist.h"       // SObjList
 
+using std::cout;
+using std::endl;
+using std::istream;
+using std::ifstream;
+using std::ostream;
+using std::ofstream;
+
 class Env;                  // cc_env.h
 
 // instrument the AST of a function to enable printing (among other

@@ -5,6 +5,13 @@
 #include "trace.h"      // tracingSys
 #include <assert.h>     // assert
 
+using std::cout;
+using std::endl;
+using std::istream;
+using std::ifstream;
+using std::ostream;
+using std::ofstream;
+
 
 #if 0
 MLValue mlStorage(DeclFlags df)
@@ -226,7 +233,7 @@ NamedAtomicType::~NamedAtomicType()
 string NamedAtomicType::uniqueName() const
 {
   // 'a' for atomic
-  return stringc << "a" << (int)this /*id*/ << "_" << name;
+  return stringc << "a" << ((int *)this)[0] /*id*/ << "_" << name;
 }
 
 

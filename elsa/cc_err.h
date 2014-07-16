@@ -10,6 +10,16 @@
 
 #include <ostream>   // ostream
 
+using std::ios;
+using std::cout;
+using std::cin;
+using std::cerr;
+using std::endl;
+using std::istream;
+using std::ifstream;
+using std::ostream;
+using std::ofstream;
+
 
 // flags on errors
 enum ErrorFlags {

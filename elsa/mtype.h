@@ -17,6 +17,16 @@
 #include "cc_ast.h"             // C++ AST
 #include "template.h"           // STemplateArgument
 
+using std::ios;
+using std::cout;
+using std::cin;
+using std::cerr;
+using std::endl;
+using std::istream;
+using std::ifstream;
+using std::ostream;
+using std::ofstream;
+
 class Env;                      // cc_env.h
 
 class MType;                    // this file
