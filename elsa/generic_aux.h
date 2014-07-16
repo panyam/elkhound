@@ -4,6 +4,16 @@
 
 #include "cc_ast.h"         // C++ AST
 
+using std::ios;
+using std::cout;
+using std::cin;
+using std::cerr;
+using std::endl;
+using std::istream;
+using std::ifstream;
+using std::ostream;
+using std::ofstream;
+
  
 // generic get/set 'ambiguity'
 template <class NODE>

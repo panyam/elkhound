@@ -12,6 +12,16 @@
 #include "strtable.h"     // StringRef
 #include "srcloc.h"       // SourceLoc
 
+using std::ios;
+using std::cout;
+using std::cin;
+using std::cerr;
+using std::endl;
+using std::istream;
+using std::ifstream;
+using std::ostream;
+using std::ofstream;
+
 // can't just #include cc.ast.gen.h b/c that #includes this file
 class Statement;
 class S_break;
