@@ -222,6 +222,7 @@ for ($i=0; $i < @lines; $i++) {
   elsif ($state == 6) {
     if ($lines[$i+1] =~ m/^yyFlexLexer::yyFlexLexer/) {
       $state++;
+      print OUT ("*/\n");
       print OUT ("#ifndef NO_YYFLEXLEXER_METHODS\n");
       next;
     }
