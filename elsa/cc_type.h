@@ -38,6 +38,15 @@
 #include "serialno.h"     // INHERIT_SERIAL_BASE
 #include "mflags.h"       // MatchFlags
 
+using std::ostream;
+using std::istream;
+using std::ofstream;
+using std::ifstream;
+using std::endl;
+using std::cout;
+using std::cerr;
+using std::cin;
+
 class Variable;           // variable.h
 class Env;                // cc_env.h
 class TS_classSpec;       // cc.ast
